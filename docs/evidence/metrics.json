@@ -1,0 +1,201 @@
+{
+  "areas": {
+    "controllers": {
+      "files": 25,
+      "lines": 9092,
+      "code_lines": 7245
+    },
+    "models": {
+      "files": 61,
+      "lines": 10802,
+      "code_lines": 8069
+    },
+    "libraries": {
+      "files": 11,
+      "lines": 3226,
+      "code_lines": 2358
+    },
+    "helpers": {
+      "files": 8,
+      "lines": 1761,
+      "code_lines": 1375
+    },
+    "views": {
+      "files": 116,
+      "lines": 16932,
+      "code_lines": 14778
+    },
+    "language": {
+      "files": 966,
+      "lines": 64541,
+      "code_lines": 63798
+    },
+    "migrations": {
+      "files": 29,
+      "lines": 1517,
+      "code_lines": 1232
+    },
+    "tests": {
+      "files": 3,
+      "lines": 123,
+      "code_lines": 84
+    },
+    "config": {
+      "files": 16,
+      "lines": 1830,
+      "code_lines": 1572
+    }
+  },
+  "biggest_php_files": [
+    {
+      "file": "application/controllers/Reports.php",
+      "lines": 1666,
+      "branches": 85
+    },
+    {
+      "file": "application/controllers/Sales.php",
+      "lines": 1574,
+      "branches": 179
+    },
+    {
+      "file": "application/models/Sale.php",
+      "lines": 1448,
+      "branches": 128
+    },
+    {
+      "file": "application/libraries/Sale_lib.php",
+      "lines": 1367,
+      "branches": 149
+    },
+    {
+      "file": "application/controllers/Items.php",
+      "lines": 1227,
+      "branches": 176
+    },
+    {
+      "file": "application/views/sales/register.php",
+      "lines": 1002,
+      "branches": 551
+    },
+    {
+      "file": "application/models/Item.php",
+      "lines": 986,
+      "branches": 99
+    },
+    {
+      "file": "application/controllers/Config.php",
+      "lines": 961,
+      "branches": 110
+    },
+    {
+      "file": "application/models/Attribute.php",
+      "lines": 807,
+      "branches": 67
+    },
+    {
+      "file": "application/helpers/tabular_helper.php",
+      "lines": 802,
+      "branches": 73
+    },
+    {
+      "file": "application/views/items/form.php",
+      "lines": 658,
+      "branches": 295
+    },
+    {
+      "file": "application/helpers/locale_helper.php",
+      "lines": 612,
+      "branches": 43
+    }
+  ],
+  "longest_functions": [
+    {
+      "function": "application/controllers/Sales.php::complete",
+      "lines": 257
+    },
+    {
+      "function": "application/models/Sale.php::search",
+      "lines": 185
+    },
+    {
+      "function": "application/libraries/Sale_lib.php::add_item",
+      "lines": 178
+    },
+    {
+      "function": "application/controllers/Items.php::view",
+      "lines": 177
+    },
+    {
+      "function": "application/controllers/Items.php::save",
+      "lines": 173
+    },
+    {
+      "function": "application/models/Sale.php::save",
+      "lines": 172
+    },
+    {
+      "function": "application/controllers/Config.php::_licenses",
+      "lines": 157
+    },
+    {
+      "function": "application/models/Item.php::search",
+      "lines": 151
+    },
+    {
+      "function": "application/models/Sale.php::create_temp_table",
+      "lines": 150
+    },
+    {
+      "function": "application/controllers/Items.php::import_csv_file",
+      "lines": 130
+    }
+  ],
+  "other": {
+    "files_by_extension_top": {
+      ".php": 1243,
+      ".png": 421,
+      ".html": 47,
+      ".sql": 34,
+      "(none)": 19,
+      ".css": 13,
+      ".sh": 11,
+      ".js": 10,
+      ".yml": 9,
+      ".svg": 9,
+      ".md": 8,
+      ".license": 6
+    },
+    "sql_files": [
+      "database/2.0_to_2.1.sql",
+      "database/2.1_to_2.2.sql",
+      "database/2.2.1_to_2.2.2.sql",
+      "database/2.2.2_to_2.3.sql",
+      "database/2.3.1_to_2.3.2.sql",
+      "database/2.3.2_to_2.3.3.sql",
+      "database/2.3.4_to_2.4.sql",
+      "database/2.3_migrate_locations.sql",
+      "database/2.3_to_2.3.1.sql",
+      "database/2.4_to_3.0.sql",
+      "database/constraints.sql",
+      "database/phppos_migrate.sql",
+      "database/rename_tables.sql",
+      "database/tables.sql"
+    ],
+    "migration_files": 29,
+    "sql_migration_scripts": 20,
+    "test_files": [
+      "application/tests/helpers/Locale_helper_test.php",
+      "application/tests/libraries/Token_lib_test.php",
+      "application/tests/models/Rounding_mode_test.php"
+    ],
+    "js_test_files": [
+      "giftcard_numbering.js",
+      "make_sale_receiving.js",
+      "ospos.js",
+      "receiving_quantity.js",
+      "sanity_check.js"
+    ]
+  },
+  "functions_over_100_lines": 26,
+  "functions_total": 1021
+}

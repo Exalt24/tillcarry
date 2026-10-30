@@ -1,0 +1,630 @@
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property CI_URI::$config is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/URI.php
+Line Number: 101
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property CI_Router::$uri is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Router.php
+Line Number: 127
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$benchmark is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$hooks is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$config is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$log is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$utf8 is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$uri is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$exceptions is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$router is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$output is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$security is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$input is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$lang is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Controller.php
+Line Number: 82
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Optional parameter $load_system_language declared before required parameter $lang_array is implicitly treated as a required parameter
+Filename:    /app/application/helpers/locale_helper.php
+Line Number: 103
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$db is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 396
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property CI_DB_mysqli_driver::$failover is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/database/DB_driver.php
+Line Number: 371
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$form_validation is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 1283
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$session is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 1283
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$agent is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 1283
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$pagination is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 1283
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$encryption is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 1283
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Appconfig is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Person is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Customer is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Employee is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Module is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Item is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Item_taxes is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Sale is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Supplier is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Inventory is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Receiving is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Giftcard is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Item_kit is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Item_kit_items is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Stock_location is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Item_quantity is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Dinner_table is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Customer_rewards is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Rewards is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Expense_category is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Expense is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+A PHP Error was encountered
+
+Severity:    8192
+Message:     Creation of dynamic property Login::$Cashup is deprecated
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 358
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+
+
+An uncaught Exception was encountered
+
+Type:        RuntimeException
+Message:     Class Attribute already exists and doesn't extend CI_Model
+Filename:    /app/vendor/codeigniter/framework/system/core/Loader.php
+Line Number: 353
+
+Backtrace:
+	File: /app/public/index.php
+	Line: 315
+	Function: require_once
+
+

@@ -1,0 +1,63 @@
+xdebug
+Xdebug
+<phpunit
+	bootstrap="./Bootstrap.php"
+	backupGlobals="false"
+	colors="true">
+	<testsuites>
+		<testsuite name="CodeIgniter Application Test Suite">
+			<directory suffix="test.php">./</directory>
+			<exclude>./_ci_phpunit_test/</exclude>
+		</testsuite>
+	</testsuites>
+	<filter>
+		<whitelist>
+			<directory suffix=".php">../controllers</directory>
+			<directory suffix=".php">../models</directory>
+			<directory suffix=".php">../views</directory>
+			<directory suffix=".php">../libraries</directory>
+			<directory suffix=".php">../helpers</directory>
+			<directory suffix=".php">../hooks</directory>
+		</whitelist>
+	</filter>
+	<logging>
+		<log type="coverage-html" target="build/coverage"/>
+		<log type="coverage-clover" target="build/logs/clover.xml"/>
+		<log type="junit" target="build/logs/junit.xml"/>
+	</logging>
+</phpunit>
+PHPUnit 7.5.6 by Sebastian Bergmann and contributors.
+
+.........                                                           9 / 9 (100%)
+
+Time: 345 ms, Memory: 16.00 MB
+
+OK (9 tests, 26 assertions)
+
+Generating code coverage report in Clover XML format ... done
+
+Generating code coverage report in HTML format ... done
+
+
+[1;37;40mCode Coverage Report:       [0m
+[1;37;40m  2026-10-30 09:24:25       [0m
+[1;37;40m                            [0m
+[1;37;40m Summary:                   [0m
+[37;41m  Classes:  2.91% (3/103)   [0m
+[37;41m  Methods:  1.16% (12/1038) [0m
+[37;41m  Lines:    0.34% (84/24781)[0m
+
+@Rounding::Rounding_mode
+  [37;41mMethods:   0.00% ( 0/ 4)[0m   [37;41mLines:  17.86% (  5/ 28)[0m
+@Token.barcode::Token_barcode_ean
+  [30;42mMethods: 100.00% ( 2/ 2)[0m   [30;42mLines: 100.00% (  2/  2)[0m
+@Token.barcode::Token_barcode_price
+  [30;42mMethods: 100.00% ( 2/ 2)[0m   [30;42mLines: 100.00% (  2/  2)[0m
+@Token.barcode::Token_barcode_weight
+  [30;42mMethods: 100.00% ( 2/ 2)[0m   [30;42mLines: 100.00% (  2/  2)[0m
+@Token::Token_lib
+  [37;41mMethods:  42.86% ( 3/ 7)[0m   [30;43mLines:  60.00% ( 36/ 60)[0m
+Module
+  [37;41mMethods:  10.00% ( 1/10)[0m   [37;41mLines:   3.92% (  2/ 51)[0m
+Token
+  [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  36.36% (  4/ 11)[0m

@@ -1,0 +1,16 @@
+This repository assesses and partially derives schema files from Open Source Point of Sale (OSPOS):
+
+  https://github.com/opensourcepos/opensourcepos
+  tag 3.3.9, commit c00ff28d10f25c2638a65cbfbbcd08b75a83c59f
+  MIT License, copyright (c) 2013-2025 jekkos and contributors (see that project's own LICENSE file for
+  the full list of copyright holders).
+
+`schema/ospos-3.3.9.mysql.sql` and `schema/ospos-3.3.9.reference-data.sql` in this repository are
+derived from that project's `database/tables.sql` and `database/constraints.sql` (table definitions and
+the application's own default reference rows, with secret-looking empty settings columns removed; no
+customer, employee or sale data, since the upstream project ships none). `docs/assessment.md` quotes
+short code fragments and cites file paths from that project's source under the same licence.
+
+No other source code from opensourcepos/opensourcepos is vendored into this repository. The rest of this
+repository (the tillcarry migration tool, its tests, the assessment prose, and the seeded invented data)
+is original work, licensed under this repository's own MIT LICENSE.

@@ -1,0 +1,20 @@
+ok    ospos_items: 11/11 checks
+ok    ospos_receivings: 6/6 checks
+ok    ospos_sales: 6/6 checks
+ok    ospos_attribute_links: 4/4 checks
+ok    ospos_customers_points: 6/6 checks
+ok    ospos_inventory: 7/7 checks
+ok    ospos_item_kit_items: 7/7 checks
+ok    ospos_item_quantities: 7/7 checks
+ok    ospos_items_taxes: 7/7 checks
+ok    ospos_receivings_items: 11/11 checks
+ok    ospos_sales_items: 10/10 checks
+ok    ospos_sales_payments: 8/8 checks
+ok    ospos_sales_reward_points: 6/6 checks
+ok    ospos_sales_taxes: 9/9 checks
+ok    ospos_sales_items_taxes: 8/8 checks
+
+rows: source 11218 = loaded 11164 + quarantined 54
+columns checksummed: 277   rows sampled field by field: 2459
+payments total in PostgreSQL: 384480.49  (quarantined payments: 739.61)
+279/279 checks passed

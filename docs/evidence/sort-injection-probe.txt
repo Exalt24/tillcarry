@@ -1,0 +1,20 @@
+Investigated lead: user-sort-into-order-by (security_checks.py), 15 call sites of
+$this->db->order_by($sort, $order) where $sort is $this->input->get('sort') with no
+allowlist against the model's own column list.
+
+Test performed on a local, disposable OSPOS 3.3.9 container (own Docker network, own
+throwaway MySQL data, no network egress), authenticated as the instance's own default
+admin account. GET /items/search was called three times, varying only the sort
+parameter: a normal column name, then two crafted values containing a SQL SLEEP() call.
+All three requests returned HTTP 200 with the same ~0.03s response time, so neither
+crafted value executed as SQL. CodeIgniter 3's order_by() (system/database/DB_query_builder.php)
+escapes the column name through _protect_identifiers() whenever escape is not explicitly
+set to FALSE, which none of these 15 call sites do, so the escaping applies. Reading the
+query builder source confirms this: it is not a short second opinion, it is why the
+observed behaviour (no timing injection) matches.
+
+Conclusion for the assessment: the pattern (unvalidated user input into order_by) is
+still worth flagging as a code-quality and defense-in-depth gap (no allowlist, relies on
+one shared library function staying correct across a framework upgrade), but it is not
+a demonstrated SQL injection in the shipped 3.3.9 code under CodeIgniter 3's own escaping.
+Downgraded from "security finding" to "hardening recommendation" on that basis.

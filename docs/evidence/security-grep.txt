@@ -1,0 +1,140 @@
+# OSPOS security grep, root ospos-src
+
+## sql-concat-in-query: 17 hits (a raw query built from a variable; safe only if the variable is trusted)
+files: 8
+  application/models/Attribute.php:684: return $this->db->query('DELETE atrv, atrl FROM ' . $this->db->dbprefix('attribute_values') . ' atrv, ' . $this->db->dbprefix('attribute_lin
+  application/models/Customer.php:102: $this->db->query('CREATE TEMPORARY TABLE IF NOT EXISTS ' . $this->db->dbprefix('sales_items_temp') .
+  application/models/Customer.php:139: $this->db->query('DROP TEMPORARY TABLE IF EXISTS ' . $this->db->dbprefix('sales_items_temp'));
+  application/models/Receiving.php:253: $this->db->query('CREATE TEMPORARY TABLE IF NOT EXISTS ' . $this->db->dbprefix('receivings_items_temp') .
+  application/models/reports/Inventory_low.php:19: $query = $this->db->query("SELECT " . $this->Item->get_item_name('name') . ",
+  application/models/reports/Summary_payments.php:128: $this->db->query('CREATE TEMPORARY TABLE IF NOT EXISTS ' . $this->db->dbprefix('sumpay_taxes_temp') .
+  ... 11 more
+
+## sql-string-in-where: 2 hits (a where clause with a variable inside the string, so the query builder does not escape it)
+files: 2
+  application/models/Attribute.php:76: $this->db->where("attribute_$data_type", $attribute_value);
+  application/models/Sale.php:460: $this->db->where("$field IS NOT NULL");
+
+## sql-interpolated-select: 5 hits (a select/from/join string that interpolates a variable)
+files: 4
+  application/models/Attribute.php:539: $this->db->select("GROUP_CONCAT(DATE_FORMAT(attribute_date, $format) SEPARATOR ', ') AS attribute_dtvalues");
+  application/models/Item.php:174: $this->db->select("GROUP_CONCAT(DISTINCT CONCAT_WS('_', definition_id, DATE_FORMAT(attribute_date, $format)) SEPARATOR '|') AS attribute_dtv
+  application/models/Item.php:357: $this->db->select("GROUP_CONCAT(DISTINCT CONCAT_WS('_', definition_id, DATE_FORMAT(attribute_date, $format)) ORDER BY definition_id SEPARATO
+  application/models/reports/Detailed_receivings.php:117: $this->db->select("GROUP_CONCAT(DISTINCT CONCAT_WS('_', definition_id, DATE_FORMAT(attribute_date, $format)) SEPARATOR '|') AS attribute_dtv
+  application/models/reports/Detailed_sales.php:167: $this->db->select("GROUP_CONCAT(DISTINCT CONCAT_WS('_', definition_id, DATE_FORMAT(attribute_date, $format)) SEPARATOR '|') AS attribute_dtv
+
+## user-sort-into-order-by: 15 hits (a column name chosen by the browser (sort=...); depends on the query builder escaping it)
+files: 15
+  application/models/Attribute.php:133: $this->db->order_by($sort, $order);
+  application/models/Cashup.php:113: $this->db->order_by($sort, $order);
+  application/models/Customer.php:400: $this->db->order_by($sort, $order);
+  application/models/Employee.php:313: $this->db->order_by($sort, $order);
+  application/models/Expense.php:148: $this->db->order_by($sort, $order);
+  application/models/Expense_category.php:157: $this->db->order_by($sort, $order);
+  ... 9 more
+
+## raw-superglobal: 15 hits (input read without the framework input class (no xss or type filtering))
+files: 5
+  application/config/config.php:60: | to $_SERVER['SERVER_ADDR'] if available, or localhost otherwise.
+  application/config/config.php:68: $config['https_on'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_ENV['FORCE_HTTPS']) && $_ENV['FORCE_HTTPS'] == 'tr
+  application/config/config.php:70: $config['base_url'] .= '://' . ((isset($_SERVER['HTTP_HOST'])) ? $_SERVER['HTTP_HOST'] : 'localhost') ;
+  application/config/config.php:71: $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+  application/config/config.php:94: | 'REQUEST_URI'    Uses $_SERVER['REQUEST_URI']
+  application/config/config.php:95: | 'QUERY_STRING'   Uses $_SERVER['QUERY_STRING']
+  ... 9 more
+
+## md5-or-sha1: 6 hits (weak hash; fine for a checksum, wrong for a password)
+files: 2
+  application/libraries/Mailchimp_lib.php:233: return $this->_connector->call('GET', '/lists/' . $list_id . '/members/' . md5(strtolower($email)), $parameters);
+  application/libraries/Mailchimp_lib.php:252: return $this->_connector->call('GET', '/lists/' . $list_id . '/members/' . md5(strtolower($email)) . '/activity', $parameters);
+  application/libraries/Mailchimp_lib.php:297: return $this->_connector->call('DELETE', '/lists/' . $list_id . '/members/' . md5(strtolower($email)));
+  application/libraries/Mailchimp_lib.php:324: return $this->_connector->call('PATCH', '/lists/' . $list_id . '/members/' . md5(strtolower($email)), $parameters);
+  application/libraries/Mailchimp_lib.php:353: return $this->_connector->call('PUT', '/lists/' . $list_id . '/members/' . md5(strtolower($email)), $parameters);
+  application/models/Employee.php:335: if($row->hash_version === '1' && $row->password === md5($password))
+
+## weak-random: 0 hits (predictable value; wrong for tokens)
+files: 0
+
+## code-execution: 2 hits (code or command execution, or object injection)
+files: 2
+  application/config/config.php:538: | Note: You need to have eval() enabled for this to work.
+  application/config/constants.php:39: | These modes are used when working with fopen()/popen()
+
+## dynamic-include: 0 hits (an include path built from a variable)
+files: 0
+
+## echo-without-escape: 20 hits (output echoed raw; escaping is the view author's job in CodeIgniter 3)
+files: 12
+  application/views/employees/form.php:136: <span class="medium"><?php echo $lang_line ?></span>
+  application/views/errors/html/error_php.php:22: File: <?php echo $error['file'] ?><br />
+  application/views/errors/html/error_php.php:23: Line: <?php echo $error['line'] ?><br />
+  application/views/errors/html/error_php.php:24: Function: <?php echo $error['function'] ?>
+  application/views/expenses/form.php:206: $('#supplier_id').val('<?php echo $expenses_info->supplier_id ?>');
+  application/views/expenses/form.php:207: $('#supplier_name').val('<?php echo $expenses_info->supplier_name ?>').attr('readonly', 'readonly');
+  ... 14 more
+
+## file-upload: 6 hits (an upload entry point)
+files: 2
+  application/controllers/Config.php:870: // load upload library
+  application/controllers/Config.php:877: $this->load->library('upload', $config);
+  application/controllers/Config.php:878: $this->upload->do_upload('company_logo');
+  application/controllers/Items.php:700: //Load upload library
+  application/controllers/Items.php:707: $this->load->library('upload', $config);
+  application/controllers/Items.php:708: $this->upload->do_upload('item_image');
+
+## allowed-types: 8 hits (which file types an upload accepts)
+files: 3
+  application/controllers/Config.php:222: $image_allowed_types 		= array('jpg','jpeg','gif','svg','webp','bmp','png','tif','tiff');
+  application/controllers/Config.php:223: $data['image_allowed_types']	= array_combine($image_allowed_types,$image_allowed_types);
+  application/controllers/Config.php:225: $data['selected_image_allowed_types'] 	= explode('|',$this->config->item('image_allowed_types'));
+  application/controllers/Config.php:299: 'image_allowed_types' => implode('|', $this->input->post('image_allowed_types')),
+  application/controllers/Config.php:872: 'allowed_types' => 'gif|jpg|png',
+  application/controllers/Items.php:702: 'allowed_types' => $this->config->item('image_allowed_types'),
+  ... 2 more
+
+## redirect-with-input: 0 hits (redirect to an address taken from the request)
+files: 0
+
+## curl-or-remote-read: 13 hits (a server side fetch of a variable address)
+files: 9
+  application/controllers/Config.php:49: $license[$i]['title'] = $this->xss_clean(file_get_contents($basename . '.version', NULL, NULL, 0, 100));
+  application/controllers/Config.php:55: $license[$i]['text'] = $this->xss_clean(file_get_contents($license_text_file , NULL, NULL, 0, 2000));
+  application/controllers/Config.php:894: $config = file_get_contents($config_path);
+  application/controllers/Config.php:914: $handle = @fopen($config_path, 'w+');
+  application/controllers/Customers.php:372: if(($handle = fopen($_FILES['file_path']['tmp_name'], 'r')) !== FALSE)
+  application/controllers/Items.php:113: $this->output->set_output(file_get_contents($thumb_path));
+  ... 7 more
+
+## error-display: 4 hits (where error output is switched on)
+files: 2
+  application/controllers/Config.php:274: $message = $upload_success ? $message : strip_tags($this->upload->display_errors());
+  application/controllers/Config.php:880: return strlen($this->upload->display_errors()) == 0 || !strcmp($this->upload->display_errors(), '<p>'.$this->lang->line('upload_no_file_sele
+  application/controllers/Items.php:660: $message = $this->xss_clean($upload_success ? $this->lang->line('items_error_adding_updating') . ' ' . $item_data['name'] : strip_tags($this
+  application/controllers/Items.php:710: return strlen($this->upload->display_errors()) === 0 || !strcmp($this->upload->display_errors(), '<p>' . $this->lang->line('upload_no_file_s
+
+## csrf-exclusions: 3 hits (which routes skip the CSRF check)
+files: 1
+  application/config/config.php:484: | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
+  application/config/config.php:486: $config['csrf_protection'] = TRUE;
+  application/config/config.php:491: $config['csrf_exclude_uris'] = array('login');
+
+## session-settings: 13 hits (session and cookie hardening switches)
+files: 1
+  application/config/config.php:362: $config['encryption_key'] = getenv('ENCRYPTION_KEY') ? getenv('ENCRYPTION_KEY') : '';
+  application/config/config.php:415: $config['sess_driver'] = 'database';
+  application/config/config.php:416: $config['sess_cookie_name'] = 'ospos_session';
+  application/config/config.php:417: $config['sess_expiration'] = 7200;
+  application/config/config.php:418: $config['sess_save_path'] = 'sessions';
+  application/config/config.php:419: $config['sess_match_ip'] = TRUE;
+  ... 7 more
+
+## sensitive-in-appconfig: 298 hits (secrets kept as plain rows in the settings table)
+files: 51
+  application/controllers/Config.php:232: $data['mailchimp']['api_key'] = $this->encryption->decrypt($this->config->item('mailchimp_api_key'));
+  application/controllers/Config.php:301: 'gcaptcha_secret_key' => $this->input->post('gcaptcha_secret_key'),
+  application/controllers/Config.php:413: $password = $this->encryption->encrypt($this->input->post('smtp_pass'));
+  application/controllers/Config.php:421: 'smtp_pass' => $password,
+  application/controllers/Config.php:442: $password = $this->encryption->encrypt($this->input->post('msg_pwd'));
+  application/controllers/Config.php:448: 'msg_pwd' => $password,
+  ... 292 more
+
