@@ -1,5 +1,7 @@
 # tillcarry
 
+[![CI](https://github.com/Exalt24/tillcarry/actions/workflows/ci.yml/badge.svg)](https://github.com/Exalt24/tillcarry/actions/workflows/ci.yml)
+
 A technical assessment of a real open source PHP/CodeIgniter till system, plus a MySQL to PostgreSQL
 migration tool with its own verifier, run against that system's real schema and a seeded, invented
 dataset built to include the awkward rows a decade of real shop data actually has.
