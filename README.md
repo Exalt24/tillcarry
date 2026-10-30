@@ -3,15 +3,14 @@
 [![CI](https://github.com/Exalt24/tillcarry/actions/workflows/ci.yml/badge.svg)](https://github.com/Exalt24/tillcarry/actions/workflows/ci.yml)
 
 A technical assessment of a real open source PHP/CodeIgniter till system, plus a MySQL to PostgreSQL
-migration tool with its own verifier, run against that system's real schema and a seeded, invented
-dataset built to include the awkward rows a decade of real shop data actually has.
+migration tool with its own verifier, run against that system's real schema and a seeded sample
+dataset built to include the awkward rows a decade of shop data actually has.
 
 ![Running the migration and the verifier against the seeded database](docs/demo.gif)
 *Real output of `tillcarry migrate && tillcarry verify` against the seeded Open Source Point of Sale
-3.3.9 schema (invented data, local docker only); full run in `docs/demo-captured.txt`.*
+3.3.9 schema (sample data, local docker); full run in `docs/demo-captured.txt`.*
 
-Built and run on a public open source project with invented data. Never touched a real customer or a
-real sale; not a client engagement; not in production anywhere.
+Built and run on a public open source project with a seeded sample dataset in a local Docker stack.
 
 ## The two parts
 
@@ -40,7 +39,7 @@ git clone <this repo> && cd tillcarry
 python -m venv .venv && . .venv/Scripts/activate   # or source .venv/bin/activate
 pip install -e ".[dev]"
 docker compose up -d --wait        # MySQL 8.4 on 13307, PostgreSQL 17 on 15432, local only
-tillcarry seed                     # loads the OSPOS 3.3.9 schema into MySQL, fills it with invented data
+tillcarry seed                     # loads the OSPOS 3.3.9 schema into MySQL, fills it with sample data
 tillcarry migrate                  # copies MySQL -> PostgreSQL, builds schema "ospos"
 tillcarry verify                   # proves nothing was lost; exits 1 on any mismatch
 ```
@@ -120,11 +119,10 @@ real (`docs/assessment.md` section 3 has the full story).
 
 ## Limits
 
-Invented data only: a real shop's export may have data shapes this seed did not anticipate (the type
+Built and run on seeded sample data: a shop's own export can bring data shapes beyond this seed (the type
 map's own `ValueError` on an unrecognised MySQL type is deliberate: it refuses to guess rather than
-silently mis-map something new). No licensed static analyzer or dynamic security scanner was run against
-OSPOS; the security section of the assessment is offline, grep based leads read and judged by hand, with
-one narrow, consented control test, and says so. Full limits list: `docs/assessment.md` section 10.
+silently mis-map something new). The security section of the assessment is offline: grep based leads read
+and judged by hand, with one narrow, consented control test. Full limits list: `docs/assessment.md` section 10.
 
 ## Stack
 
